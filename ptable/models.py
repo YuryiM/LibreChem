@@ -21,7 +21,7 @@ class Element(models.Model):
 	electronAffinity
 	'''
 
-	def _str_(self):
+	def __str__(self):
 		return self.engName
 
 
