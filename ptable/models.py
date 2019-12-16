@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Element(models.Model):
-	engName = models.CharField(max_length=20)
+	en_name = models.CharField(max_length=20)
 	description = models.TextField()
-	atomicNum = models.PositiveSmallIntegerField()
+	atomic_num = models.PositiveSmallIntegerField()
 	'''
 	#Columns to add
 	atomicMass
@@ -22,6 +22,6 @@ class Element(models.Model):
 	'''
 
 	def __str__(self):
-		return self.engName
+		return self.en_name
 
 
