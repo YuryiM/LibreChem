@@ -20,4 +20,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='site-home'),
+    path('ptable/', include('ptable.urls')),
+    path('calculator/', include('calculator.urls')),
+
 ]
