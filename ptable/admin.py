@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Element
 
 class ElementAdmin(admin.ModelAdmin):
-	fields = ('en_name', 
+	'''fields = ('en_name', 
 				'discoverer', 
 				'description', 
 				'atomic_num', 
@@ -22,7 +22,11 @@ class ElementAdmin(admin.ModelAdmin):
 				'triple_point', 
 				'critical_point', 
 				'heat_of_fusion', 
-				'heat_of_vaporization')
-	#fields = ('en_name', 'description', 'atomic_num')
+				'heat_of_vaporization')'''
+	fieldsets = [
+		('Element', {'fields': ['en_name','appearance', 'standard_atomic_weight']}),
+		('Periodic table properties', {'fields': ['atomic_num','group', 'period', 'block', 'category', 'electron_configuration']}),
+		('Physical properties', {'fields': ['phase_at_STP','melting_point_celsius', 'boiling_point_celsius', 'triple_point','critical_point', 'heat_of_fusion', 'heat_of_vaporization']}),
+	]
 
 admin.site.register(Element, ElementAdmin)
