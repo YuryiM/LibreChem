@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from .models import Element
 
-# Create your views here.
+
 def home(request):
-	return render(request, 'ptable/ptable.html')
+	context = {
+		'element': Element.objects.all()
+	}
+	return render(request, 'ptable/ptable.html', context)

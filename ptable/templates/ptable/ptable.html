@@ -2,6 +2,15 @@
 
 {% block bodyContent %}
 
-	<h1>Periodic Table!</h1>
+	{% for element in elements %}
 	
+	<article>
+		<div>
+			<h2>{{ element.en_name }}</h2>
+			<p>{{ element.appearance }}</p>
+		</div>
+		<hr>
+	</article>
+
+	{% endfor %}
 {% endblock bodyContent %}

@@ -24,7 +24,7 @@ class ElementAdmin(admin.ModelAdmin):
 				'heat_of_fusion', 
 				'heat_of_vaporization')'''
 	fieldsets = [
-		('Element', {'fields': ['en_name','appearance', 'standard_atomic_weight']}),
+		('Element', {'fields': ['en_name','description', 'appearance', 'standard_atomic_weight']}),
 		('Periodic table properties', {'fields': ['atomic_num','group', 'period', 'block', 'category', 'electron_configuration']}),
 		('Physical properties', {'fields': ['phase_at_STP','melting_point_celsius', 'boiling_point_celsius', 'triple_point','critical_point', 'heat_of_fusion', 'heat_of_vaporization']}),
 	]
