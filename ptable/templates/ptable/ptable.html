@@ -2,15 +2,23 @@
 
 {% block bodyContent %}
 
+    <hr>
 	{% for element in elements %}
-	
+
 	<article>
 		<div>
-			<h2>{{ element.en_name }}</h2>
-			<p>{{ element.appearance }}</p>
+			<h3>{{ element.en_name }} ({{ element.symbol }})</h3>
+			<p>
+                Atomic Number: {{ element.atomic_num }}<br>
+                Period: {{ element.period }}<br>
+                Group: {{ element.group }}
+
+            </p>
+
 		</div>
 		<hr>
 	</article>
 
 	{% endfor %}
+
 {% endblock bodyContent %}

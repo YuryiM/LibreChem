@@ -2,20 +2,21 @@ from django.db import models
 
 
 class Element(models.Model):
-	en_name                     = models.CharField(max_length=20, default='')
-	description                 = models.TextField(default='')
+	en_name                     = models.CharField(max_length=20, default='', blank=False)
+	symbol 						= models.CharField(max_length=2, default='', blank=False)
+	description                 = models.TextField(default='', blank=True)
 	atomic_num                  = models.PositiveSmallIntegerField(default=1)
-	discoverer                  = models.CharField(max_length=50, default='')
+	discoverer                  = models.CharField(max_length=50, default='', blank=True)
 	year_discovered             = models.PositiveSmallIntegerField(default=1)
-	phase_at_STP                = models.CharField(max_length=20, default='')
-	appearance                  = models.CharField(max_length=50, default='')
+	phase_at_STP                = models.CharField(max_length=20, default='', blank=True)
+	appearance                  = models.CharField(max_length=50, default='', blank=True)
 	standard_atomic_weight      = models.DecimalField(max_digits=30, decimal_places=15, default=1.0)
 	group                       = models.PositiveSmallIntegerField(default=1)
 	period                      = models.PositiveSmallIntegerField(default=1)
-	block                       = models.CharField(max_length=5, default='');
-	category                    = models.CharField(max_length=20, default='')
-	electron_configuration_full = models.CharField(max_length=200, default='')
-	electron_configuration      = models.CharField(max_length=30, default='')
+	block                       = models.CharField(max_length=5, default='', blank=True);
+	category                    = models.CharField(max_length=20, default='', blank=True)
+	electron_configuration_full = models.CharField(max_length=200, default='', blank=True)
+	electron_configuration      = models.CharField(max_length=30, default='', blank=True)
 	melting_point_celsius       = models.DecimalField(max_digits=30, decimal_places=15, default=1.0)
 	boiling_point_celsius       = models.DecimalField(max_digits=30, decimal_places=15, default=1.0)
 	density_at_STP              = models.DecimalField(max_digits=30, decimal_places=15, default=1.0)

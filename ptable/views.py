@@ -4,6 +4,6 @@ from .models import Element
 
 def home(request):
 	context = {
-		'element': Element.objects.all()
+		'elements': Element.objects.all()
 	}
 	return render(request, 'ptable/ptable.html', context)
