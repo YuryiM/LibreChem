@@ -1,7 +1,62 @@
 {% extends 'base.html' %}
 
-{% block bodyContent %}
+{% block headContent %}
 
-	<h1>Calculator</h1>
+{% endblock headContent %}
+
+{% block bodyContent %}
+    <div>
+        <h3>Ideal Gas Law</h3>
+        <h4>PV = nRT</h4>
+        <p><b>Must</b> input 3 known variables to get unknown variable</p>
+        <label for="IGL_pressure">Pressure:</label>
+        <input type="text" id="IGL_pressure" name="IGL_pressure"><br>
+        <label for="IGL_vol">Volume:</label>
+        <input type="text" id="IGL_vol" name="IGL_vol"><br>
+        <label for="IGL_moles">Moles:</label>
+        <input type="text" id="IGL_moles" name="IGL_moles"><br>
+        <label for="IGL_temp">Temperature:</label>
+        <input type="text" id="IGL_temp" name="IGL_temp">
+    </div>
+    <hr>
+    <div>
+        <h3>Energy of a photon</h3>
+        <h4>E = hv</h4>
+        <label for="E_photon_frequency">Frequency:</label>
+        <input type="text" id="E_photon_frequency" name="E_photon_frequency">
+    </div>
+    <hr>
+    <div>
+        <h3>Boyle's Law</h3>
+        <h4>P1 * V1 = P2 * V2</h4>
+        <label for="boyle_p1">Pressure 1:</label>
+        <input type="text" id="boyle_p1" name="boyle_p1"><br>
+        <label for="boyle_v1">Volume 1:</label>
+        <input type="text" id="boyle_v1" name="boyle_v1"><br>
+        <label for="boyle_p2">Pressure 2:</label>
+        <input type="text" id="boyle_p2" name="boyle_p2"><br>
+        <label for="boyle_v2">Volume 2:</label>
+        <input type="text" id="boyle_v2" name="boyle_v2">
+    </div>
+    <hr>
+    <div>
+        <h3>Molarity</h3>
+        <h4>M = mol solute / Liters of solution</h4>
+        <label for="M_solute">Moles solute: </label>
+        <input type="text" id="M_solute" name="M_solute"><br>
+        <label for="M_solvent">Liters solvent: </label>
+        <input type="text" id="M_solvent" name="M_solvent"><br>
+        <label for="Molarity">Molarity: </label>
+        <input type="text" id="Molarity" name="Molarity"><br>
+    </div>
+    <hr>
+    <div>
+        <h3>Combined Gas Law</h3>
+        <h4>M = mol solute / Liters of solution</h4>
+    </div>
+    <hr>
+
+    <!--Custom js-->
+    <script type="text/javascript" src="{% static 'js/calculator.js' %}"></script>
 
 {% endblock bodyContent %}
