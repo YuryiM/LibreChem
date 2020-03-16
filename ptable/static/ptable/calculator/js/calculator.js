@@ -86,7 +86,7 @@ $(document).ready(function(){
         }
     });
 
-    $("#WF_calculate").onclick(function (){
+    $("#WF_calculate").click(function (){
         const c = 299792458;
         const freq = $("#WF_frequency").val();
         const wavelength = $("#WF_wavelength").val();
@@ -101,4 +101,44 @@ $(document).ready(function(){
             window.alert("Improper Wavelength/Frequency input, please try again")
         }
     });
+    $("#SHE_calc").click(function () {
+        const c = $("#SHE_specific_heat").val();
+        const m = $("#SHE_mass").val();
+        const t = $("#SHE_temp").val();
+        const q = $("#SHE_heat").val();
+
+        if(c.length == 0 && m.length != 0 && t.length != 0 && q.length != 0){
+            $("#SHE_specific_heat").val((q)/(m * t));
+        }
+        else if(c.length != 0 && m.length == 0 && t.length != 0 && q.length != 0){
+            $("#SHE_specific_heat").val((q)/(c * t));
+        }
+        else if(c.length != 0 && m.length != 0 && t.length == 0 && q.length != 0){
+            $("#SHE_specific_heat").val((q)/(m * c));
+        }
+        else if(c.length != 0 && m.length != 0 && t.length != 0 && q.length == 0){
+            $("#SHE_specific_heat").val(c * m * t);
+        }
+        else{
+            window.alert("Improper Specific Heat input, please try again")
+        }
+    })
+    $("#KE_calc").click(function () {
+        const m = $("#KE_mass").val();
+        const v = $("#KE_speed").val();
+        const ke = $("#KE_result").val();
+
+        if(m.length == 0 && v.length != 0 && ke.length != 0){
+            $("#KE_mass").val((2 * ke)/Math.pow(v, 2));
+        }
+        else if(m.length != 0 && v.length == 0 && ke.length != 0){
+            $("#KE_speed").val(Math.sqrt((2 * ke)/m));
+        }
+        else if(m.length != 0 && v.length != 0 && ke.length == 0){
+            $("#KE_result").val(0.5 * m * Math.pow(v, 2));
+        }
+        else {
+            window.alert("Improper KE of a Molecule input, please try again")
+        }
+    })
 });

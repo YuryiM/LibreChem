@@ -28,6 +28,7 @@
         <input type="text" id="IGL_temp" name="IGL_temp"><br>
 
         <button id="idealGasLaw">Calculate</button>
+        <button id="t">Clear</button>
     </div>
     <hr>
     <!-- Energy of a Photon -->
@@ -80,6 +81,7 @@
         <input type="text" id="gasLaw_t2" name="gasLaw_t2"><br>
 
         <button id="gasLaw">Calculate</button>
+
     </div>
     <hr>
     <!-- Molarity -->
@@ -100,8 +102,36 @@
     </div>
     <hr>
     <div>
-        <h3>Combined Gas Law</h3>
-        <h4>M = mol solute / Liters of solution</h4>
+        <h3>Specific Heat Equation</h3>
+        <h4>Q = cmΔT</h4>
+        <label for="SHE_mass">Mass (g): </label>
+        <input type="text" id="SHE_mass" name="SHE_mass"><br>
+
+        <label for="SHE_specific_heat">Specific heat (J/g C): </label>
+        <input type="text" id="SHE_specific_heat" name="SHE_specific_heat"><br>
+
+        <label for="SHE_temp">Change in temperature (C): </label>
+        <input type="text" id="SHE_temp" name="SHE_temp"><br>
+
+        <label for="SHE_heat">Heat (J): </label>
+        <input type="text" id="SHE_heat" name="SHE_heat"><br>
+
+        <button id="SHE_calc">Calculate</button>
+    </div>
+    <hr>
+    <div>
+        <h3>Average Kinetic Energy of a Single Gas Molecule</h3>
+        <h4>KE = (1/2)mv^2</h4>
+        <label for="KE_mass">Mass (kg): </label>
+        <input type="text" id="KE_mass" name="KE_mass"><br>
+
+        <label for="KE_speed">Speed of the molecule (m/s): </label>
+        <input type="text" id="KE_speed" name="KE_speed"><br>
+
+        <label for="KE_result">Kinetic energy (J): </label>
+        <input type="text" id="KE_result" name="KE_result"><br>
+
+        <button id="KE_calc">Calculate</button>
     </div>
     <hr>
 
