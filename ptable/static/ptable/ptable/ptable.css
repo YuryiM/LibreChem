@@ -13,3 +13,64 @@ div#detailed {
     border-style: solid;
     border-width: 2px;
 }
+td.type1
+{
+background-color: #fffa47;
+}
+td.type2
+{
+background-color: #318053;
+color:white;
+}
+td.type3
+{
+background-color:skyblue;
+}
+td.type4
+{
+background-color:red;
+color:white;
+}
+td.type5
+{
+background-color: #ffd165;
+}
+td.type6
+{
+background-color: #805378;
+color:white;
+}
+td.type7
+{
+background-color:#4545ff;
+color:white;
+}
+td.type8
+{
+background-color:#ff69a9;
+color:white;
+}
+td.type9
+{
+background-color:lightgreen;
+}
+td.type10
+{
+background-color:pink;
+}
+td.stype1
+{
+border-bottom-style:none;
+border-top-style:none;
+}
+td.type30{
+    background-color: #8ceaff;
+    color:black;
+}
+
+td.stype2
+{
+border-bottom-style:none;
+border-top-style:none;
+border-left-style:none;
+}

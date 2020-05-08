@@ -111,13 +111,13 @@ $(document).ready(function(){
             $("#SHE_specific_heat").val((q)/(m * t));
         }
         else if(c.length != 0 && m.length == 0 && t.length != 0 && q.length != 0){
-            $("#SHE_specific_heat").val((q)/(c * t));
+            $("#SHE_mass").val((q)/(c * t));
         }
         else if(c.length != 0 && m.length != 0 && t.length == 0 && q.length != 0){
-            $("#SHE_specific_heat").val((q)/(m * c));
+            $("#SHE_temp").val((q)/(m * c));
         }
         else if(c.length != 0 && m.length != 0 && t.length != 0 && q.length == 0){
-            $("#SHE_specific_heat").val(c * m * t);
+            $("#SHE_heat").val(c * m * t);
         }
         else{
             window.alert("Improper Specific Heat input, please try again")
